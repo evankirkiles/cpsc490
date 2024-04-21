@@ -1,0 +1,12 @@
+name = "cs490_2"
+main = "src/index-basic.ts"
+compatibility_date = "2024-03-20"
+
+[dev]
+upstream_protocol = "http"
+host = "info.cern.ch"
+
+[[d1_databases]]
+binding = "D1"
+database_name = "prefetcher"
+database_id = "c020574a-5623-407b-be0c-cd192bab9545"

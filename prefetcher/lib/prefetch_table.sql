@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS prefetch;
+CREATE TABLE IF NOT EXISTS prefetch (
+	src VARCHAR(50),
+	dest VARCHAR(50),
+	freq INTEGER NOT NULL DEFAULT 0
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_src_dest ON prefetch(src, dest);

@@ -1,0 +1,26 @@
+{
+  "name": "cs490_2",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240320.1",
+    "@types/node": "^20.12.7",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0",
+    "wrangler": "3.37.0"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "dbsetup": "wrangler d1 execute prefetcher --local --file lib/prefetch_table.sql",
+    "dev:basic": "rm -rf .wrangler/state/v3/cache; wrangler dev src/index-basic.ts",
+    "dev:analytic": "rm -rf .wrangler/state/v3/cache; wrangler dev src/index-prefetchAnalytics.ts",
+    "dev:htmlparse": "rm -rf .wrangler/state/v3/cache; wrangler dev src/index-prefetchHTMLParser.ts",
+    "test": "ts-node test/index.ts"
+  },
+  "packageManager": "pnpm@8.9.0+sha256.8f5264ad1d100da11a6add6bb8a94c6f1e913f9e9261b2a551fabefad2ec0fec",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}

@@ -1,0 +1,49 @@
+---
+import "@/styles/reset.scss";
+import "@/styles/index.scss";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<main>
+			<h1>Optimizing Web Delivery: Applying CPU Prefetching Techniques to CDNs</h1>
+			<ul class="byline">
+				<li>
+					<p>
+						<span>Author</span><br/>Evan Kirkiles<br><a href="mailto:evan.kirkiles@yale.edu">evan.kirkiles@yale.edu</a>
+					</p>
+				</li>
+				<li>
+					<p>
+						<span>Advisor</span><br/>Scott Petersen<br><a href="mailto:scott.petersen@yale.edu">scott.petersen@yale.edu</a>
+				</p>
+				</li>
+			</ul>
+			<p class="abstract">
+				Predictive prefetching is a technique allowing a cache to improve cache hit ratios by speculatively preparing itself with data that will be requested from the cache ahead of time. This paper explores the application of predictive prefetching techniques, traditionally utilized in CPU caches, to enhance web caching strategies within Content Delivery Networks (CDNs). By drawing parallels between CPU and web caching strategies, the research introduces two prefetching implementations aimed at minimizing request latency and optimizing content delivery. The first method employs HTML parsing to prefetch potentially needed resources based on static analysis of links in web pages. The second leverages historical traffic data to predict and load future requests dynamically based on real user site traversals. Through simulated user testing using Cloudflare’s local wrangler development environment, the efficacy of these methods is evaluated against a traditional caching strategy. Results indicate that predictive prefetching can significantly reduce user-perceived latency and increase cache hit ratios on unvisited pages, particularly in environments with fluctuating or sparse traffic that are prone to low cache hit ratios. The findings suggest that integrating predictive prefetching into CDNs could improve the efficiency of web resource delivery for smaller customers, albeit with considerations for increased complexity and potential origin server load.
+			</p>
+			<ul class="links">
+				<li>
+					<a href="./files/cs490_ewk25_proposal.pdf"  target="_blank">Proposal</a>
+				</li>
+				<li>
+					<a href="./files/cs490_ewk25_report.pdf"  target="_blank">Report</a>
+				</li>
+				<li>
+					<a href="./files/cs490_ewk25_poster.pdf"  target="_blank">Poster</a>
+				</li>
+				<li>
+					<a href="https://github.com/evankirkiles/cpsc490" target="_blank">Code</a>
+				</li>
+			</ul>
+		</main>
+	</body>
+</html>

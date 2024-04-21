@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+main {
+  margin: auto;
+  max-inline-size: 80ch;
+  padding-block: 3rem;
+}
+
+h1 {
+  line-height: 1.2;
+  font-weight: 400;
+  margin-block-end: 1rem;
+  text-align: center;
+}
+
+p.abstract {
+  line-height: 1.4;
+  margin: 1rem 0;
+  text-indent: 1rem;
+}
+
+.byline {
+  display: flex;
+  inline-size: 100%;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1px;
+  justify-content: center;
+
+  & p {
+    line-height: 1.1;
+
+    & > span {
+      font-size: 0.8em;
+    }
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    min-inline-size: min(30ch, 100%);
+    max-inline-size: 30ch;
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  inline-size: 100%;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  padding: 0;
+  gap: 1px;
+
+  li {
+    display: block;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    min-inline-size: min(15ch, 100%);
+
+    & a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid black;
+      margin: -1px;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
